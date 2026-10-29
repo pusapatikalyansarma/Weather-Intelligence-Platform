@@ -1,0 +1,129 @@
+.weather-map-placeholder {
+  display: grid;
+  place-items: center;
+  min-height: 300px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid #26354c;
+  border-radius: 16px;
+  background: #121d30;
+}
+
+.weather-map-icon {
+  font-size: 48px;
+  color: #70b7ff;
+}
+
+.weather-map-placeholder h3 {
+  color: #f3f6fc;
+}
+
+.weather-map-placeholder p {
+  max-width: 460px;
+  color: #aab8ce;
+  line-height: 1.7;
+}
+
+/* Interactive map styles */
+.weather-map-page {
+  width: 100%;
+}
+
+.map-description {
+  margin-top: 8px;
+  color: #8490a5;
+  font-size: 14px;
+}
+
+.map-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 20px 0 14px;
+  flex-wrap: wrap;
+}
+
+.map-toolbar select,
+.weather-map-page select,
+.map-toolbar button {
+  padding: 10px 14px;
+  border: 1px solid #dce2eb;
+  border-radius: 8px;
+  background: white;
+  color: #243047;
+  font: inherit;
+}
+
+.map-toolbar button {
+  cursor: pointer;
+}
+
+.weather-map-container {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid #dce2eb;
+}
+
+.weather-map {
+  width: 100%;
+  height: 100%;
+}
+
+.map-help {
+  margin-top: 12px;
+  color: #8490a5;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .weather-map-container {
+    height: 350px;
+  }
+
+  .map-toolbar {
+    align-items: flex-start;
+  }
+}
+
+.map-search-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.map-search-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid var(--border-color, #374151);
+  border-radius: 8px;
+  background: var(--card-background, #111827);
+  color: inherit;
+  font: inherit;
+}
+
+.map-search-form button {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.map-search-form button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.map-error {
+  margin: 8px 0 14px;
+  color: #ef4444;
+}
+
+@media (max-width: 600px) {
+  .map-search-form {
+    flex-direction: column;
+  }
+}

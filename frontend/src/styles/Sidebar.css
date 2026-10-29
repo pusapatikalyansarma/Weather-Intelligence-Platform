@@ -1,0 +1,124 @@
+.sidebar {
+  width: 245px;
+  min-width: 245px;
+  min-height: 100vh;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  background: #10192b;
+  border-right: 1px solid #243047;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Manrope", sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+  margin: 0 0 55px 8px;
+}
+
+.brand-icon {
+  color: #ffc857;
+  font-size: 29px;
+}
+
+.brand-light {
+  color: #60a5fa;
+}
+
+.nav-heading {
+  color: #8493ad;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  margin: 0 0 16px 12px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 14px 15px;
+  margin-bottom: 7px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #aab6ca;
+  background: transparent;
+  font-size: 14px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-item:hover {
+  color: #f3f6fc;
+  background: #18263b;
+}
+
+.nav-item.active {
+  color: #8fc1ff;
+  background: #1c3150;
+  border-color: #2b4568;
+}
+
+.nav-item span {
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  padding: 20px 12px;
+  border-top: 1px solid #263248;
+}
+
+.sidebar-weather {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.sidebar-bottom p {
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.sidebar-bottom small {
+  color: #8493ad;
+}
+
+@media (max-width: 1100px) {
+  .sidebar {
+    width: 205px;
+    min-width: 205px;
+    padding: 25px 14px;
+  }
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+    padding: 16px;
+    display: block;
+  }
+
+  .brand {
+    margin: 0 0 16px;
+  }
+
+  .nav-heading,
+  .sidebar-bottom {
+    display: none;
+  }
+
+  .nav-item {
+    display: inline-flex;
+    width: auto;
+    padding: 10px;
+    margin: 0 4px 0 0;
+  }
+}

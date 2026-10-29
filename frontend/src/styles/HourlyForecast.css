@@ -1,0 +1,109 @@
+.hourly-section {
+  margin-top: 30px;
+}
+
+.hourly-chart-card {
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  background: rgba(19, 29, 49, 0.9);
+}
+
+.hourly-chart-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  color: #aab7ce;
+  font-size: 13px;
+}
+
+.hourly-chart-summary strong {
+  color: #f4f7ff;
+  font-size: 20px;
+}
+
+.hourly-chart-summary small {
+  color: #aab7ce;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.hourly-chart-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.hourly-chart {
+  display: block;
+  width: 100%;
+  min-width: 480px;
+  overflow: visible;
+}
+
+.chart-grid-line {
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-dasharray: 4 5;
+}
+
+.chart-axis-label {
+  fill: #aab7ce;
+  font-size: 11px;
+}
+
+.temperature-line {
+  fill: none;
+  stroke: #70b7ff;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.temperature-point {
+  fill: #8bc5ff;
+  stroke: #192a46;
+  stroke-width: 2;
+}
+
+.hourly-temperature-list {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.hourly-temperature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 4px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.hourly-temperature-item span {
+  color: #aab7ce;
+  font-size: 11px;
+}
+
+.hourly-temperature-item strong {
+  color: #f4f7ff;
+  font-size: 14px;
+}
+
+@media (max-width: 700px) {
+  .hourly-chart-card {
+    padding: 15px;
+  }
+
+  .hourly-temperature-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .hourly-chart-summary {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
