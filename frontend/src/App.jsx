@@ -84,20 +84,22 @@ function AppLayout() {
             <h1>{pageTitles[location.pathname] ?? "Weather dashboard"}</h1>
           </div>
 
-          <form className="search-form" onSubmit={handleSearch}>
-            <span>⌕</span>
+           {location.pathname !== "/weather-map" && (
+              <form className="search-form" onSubmit={handleSearch}>
+                <span>⌕</span>
 
-            <input
-              value={city}
-              onChange={(event) => setCity(event.target.value)}
-              placeholder="Search a city..."
-              aria-label="Search city"
-            />
+                <input
+                  value={city}
+                  onChange={(event) => setCity(event.target.value)}
+                  placeholder="Search a city..."
+                  aria-label="Search city"
+                />
 
-            <button type="submit" disabled={loading}>
-              {loading ? "Loading..." : "Search"}
-            </button>
-          </form>
+                <button type="submit" disabled={loading}>
+                  {loading ? "Loading..." : "Search"}
+                </button>
+              </form>
+            )}
         </header>
 
         <div className="demo-notice">
